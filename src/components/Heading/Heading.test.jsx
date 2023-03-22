@@ -91,7 +91,6 @@ describe('<Heading />', () => {
     // eslint-disable-next-line no-unused-vars
     const heading = screen.getByRole('heading', { name: 'Texto' });
     const h6 = container.querySelector('h6');
-
     expect(h6.tagName.toLowerCase()).toBe('h6');
   });
 });

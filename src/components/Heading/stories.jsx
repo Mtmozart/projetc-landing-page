@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { Heading } from '.';
 
 export default {
