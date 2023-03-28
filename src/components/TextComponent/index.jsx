@@ -3,11 +3,8 @@ import * as Styled from './styles';
 /* eslint-disable */
 
 export const TextComponent = ({ children }) => {
-  return (
-    <Styled.Container>
-      {children}
-    </Styled.Container>
-  );
+    return <Styled.Container dangerouslySetInnerHTML={{ __html: children }} />;
+
 };
 
 TextComponent.propTypes = {
