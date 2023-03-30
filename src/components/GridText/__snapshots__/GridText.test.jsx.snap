@@ -7,33 +7,33 @@ exports[`<GridText /> should render with background 1`] = `
   text-transform: uppercase;
 }
 
-.c8 {
+.c9 {
   color: #0A1128;
   font-size: 3.2rem;
   text-transform: uppercase;
 }
 
-.c5 {
+.c6 {
   font-size: 2.4rem;
 }
 
-.c2 > {
+.c2 > .c5 {
   margin-bottom: 6.4rem;
 }
 
-.c6 {
+.c7 {
   counter-reset: grid-counter;
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
   gap: 3.2rem;
 }
 
-.c7 .c3 {
+.c8 .c3 {
   position: relative;
   left: 5rem;
 }
 
-.c7 .c3::before {
+.c8 .c3::before {
   counter-increment: grid-counter;
   content: counter(grid-counter);
   position: absolute;
@@ -71,6 +71,12 @@ exports[`<GridText /> should render with background 1`] = `
   }
 }
 
+@media (max-width:768px) {
+  .c7 {
+    grid-template-columns: 1fr;
+  }
+}
+
 <div>
   <div
     class="c0"
@@ -87,51 +93,51 @@ exports[`<GridText /> should render with background 1`] = `
           My grid
         </h2>
         <div
-          class="c5"
+          class="c5 c6"
         >
           Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde
         </div>
         <div
-          class="c6"
+          class="c7"
         >
           <div
-            class="c7"
+            class="c8"
           >
             <h3
-              class="c3 c8"
+              class="c3 c9"
             >
               Teste 1
             </h3>
             <div
-              class="c5"
+              class="c5 c6"
             >
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.
             </div>
           </div>
           <div
-            class="c7"
+            class="c8"
           >
             <h3
-              class="c3 c8"
+              class="c3 c9"
             >
               Teste 2
             </h3>
             <div
-              class="c5"
+              class="c5 c6"
             >
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.
             </div>
           </div>
           <div
-            class="c7"
+            class="c8"
           >
             <h3
-              class="c3 c8"
+              class="c3 c9"
             >
               Teste 3
             </h3>
             <div
-              class="c5"
+              class="c5 c6"
             >
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.
             </div>
@@ -150,33 +156,33 @@ exports[`<GridText /> should render with out background 1`] = `
   text-transform: uppercase;
 }
 
-.c8 {
+.c9 {
   color: #0A1128;
   font-size: 3.2rem;
   text-transform: uppercase;
 }
 
-.c5 {
+.c6 {
   font-size: 2.4rem;
 }
 
-.c2 > {
+.c2 > .c5 {
   margin-bottom: 6.4rem;
 }
 
-.c6 {
+.c7 {
   counter-reset: grid-counter;
   display: grid;
   grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
   gap: 3.2rem;
 }
 
-.c7 .c3 {
+.c8 .c3 {
   position: relative;
   left: 5rem;
 }
 
-.c7 .c3::before {
+.c8 .c3::before {
   counter-increment: grid-counter;
   content: counter(grid-counter);
   position: absolute;
@@ -214,6 +220,12 @@ exports[`<GridText /> should render with out background 1`] = `
   }
 }
 
+@media (max-width:768px) {
+  .c7 {
+    grid-template-columns: 1fr;
+  }
+}
+
 <div>
   <div
     class="c0"
@@ -230,51 +242,51 @@ exports[`<GridText /> should render with out background 1`] = `
           My grid
         </h2>
         <div
-          class="c5"
+          class="c5 c6"
         >
           Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde
         </div>
         <div
-          class="c6"
+          class="c7"
         >
           <div
-            class="c7"
+            class="c8"
           >
             <h3
-              class="c3 c8"
+              class="c3 c9"
             >
               Teste 1
             </h3>
             <div
-              class="c5"
+              class="c5 c6"
             >
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.
             </div>
           </div>
           <div
-            class="c7"
+            class="c8"
           >
             <h3
-              class="c3 c8"
+              class="c3 c9"
             >
               Teste 2
             </h3>
             <div
-              class="c5"
+              class="c5 c6"
             >
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.
             </div>
           </div>
           <div
-            class="c7"
+            class="c8"
           >
             <h3
-              class="c3 c8"
+              class="c3 c9"
             >
               Teste 3
             </h3>
             <div
-              class="c5"
+              class="c5 c6"
             >
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis cum delectus molestias. Atque doloribus nobis laudantium esse ut, non commodi maxime distinctio veritatis unde, reprehenderit minus ad dolores provident maiores.
             </div>
