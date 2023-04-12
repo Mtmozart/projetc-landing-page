@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom/client';
 //Minha progamações
 import { GlobalStyles } from './styles/global-Styles';
 import { theme } from './styles/theme';
-import Home from './templates/App/Index';
+import Home from './templates/Home/Index';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
