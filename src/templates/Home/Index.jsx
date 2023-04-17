@@ -1,9 +1,14 @@
-import { MockBase } from '../Base/mock';
+import { GridTwoColumns } from '../../components/GridTwoColumns';
+import { GridContent } from '../../components/GridContent';
+import { GridText } from '../../components/GridText';
+import { GridImage } from '../../components/GridImage';
+import { PageNotFound } from '../PageNotFound';
+import { Loading } from '../Loading';
 import { useEffect, useRef, useState } from 'react';
 import { Base } from '../Base';
 import { mapData } from '../../api/map-data';
-import { PageNotFound } from '../PageNotFound';
-import { Loading } from '../Loading';
+// eslint-disable-next-line no-unused-vars
+import * as Styled from './styles';
 
 function Home() {
   const isMounted = useRef(true);
@@ -18,8 +23,8 @@ function Home() {
         const data = await apiData.json();
         const json = await Object.values(data);
         const { attributes } = await json[0];
+        console.log(attributes);
         const pageData = await mapData([attributes]);
-        //console.log(pageData);
         await setData(pageData[0]);
       } catch (er) {
         setData(undefined);
@@ -40,7 +45,33 @@ function Home() {
     return <Loading />;
   }
 
-  return <Base {...MockBase} />;
+  const { menu, sections, footerHtml, slug, id } = data;
+  const { links, text, link, srcImg } = menu;
+  return (
+    <Base
+      links={links}
+      footerHtml={footerHtml}
+      logoData={{ text, link, srcImg }}
+    >
+      {sections.map((section, index) => {
+        const { component } = section;
+        const key = `${slug}-${index}-${id}`;
+
+        if (component === 'section.section-two-columns') {
+          return <GridTwoColumns key={key} {...section} />;
+        }
+        if (component === 'section.section-content') {
+          return <GridContent key={key} {...section} />;
+        }
+        if (component === 'section.section-grid-text') {
+          return <GridText key={key} {...section} />;
+        }
+        if (component === 'section.section-grid-image') {
+          return <GridImage key={key} {...section} />;
+        }
+      })}
+    </Base>
+  );
 }
 
 export default Home;
