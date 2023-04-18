@@ -23,7 +23,6 @@ function Home() {
         const data = await apiData.json();
         const json = await Object.values(data);
         const { attributes } = await json[0];
-        console.log(attributes);
         const pageData = await mapData([attributes]);
         await setData(pageData[0]);
       } catch (er) {
@@ -47,6 +46,7 @@ function Home() {
 
   const { menu, sections, footerHtml, slug, id } = data;
   const { links, text, link, srcImg } = menu;
+  console.log(sections);
   return (
     <Base
       links={links}
