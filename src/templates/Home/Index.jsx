@@ -7,6 +7,8 @@ import { Loading } from '../Loading';
 import { useEffect, useRef, useState } from 'react';
 import { Base } from '../Base';
 import { mapData } from '../../api/map-data';
+
+import config from '../../config';
 // eslint-disable-next-line no-unused-vars
 import * as Styled from './styles';
 
@@ -32,10 +34,24 @@ function Home() {
     if (isMounted.current === true) {
       load();
     }
+
     return () => {
       isMounted.current = false;
     };
   }, []);
+  useEffect(() => {
+    if (data === undefined) {
+      document.title = `Página não encontrada | ${config.siteName}`;
+    }
+
+    if (data && !data.slug) {
+      document.title = `Carregando... | ${config.siteName}`;
+    }
+
+    if (data && data.title) {
+      document.title = `${data.title} | ${config.siteName}`;
+    }
+  }, [data]);
 
   if (data === undefined) {
     return <PageNotFound />;
@@ -46,7 +62,6 @@ function Home() {
 
   const { menu, sections, footerHtml, slug, id } = data;
   const { links, text, link, srcImg } = menu;
-  console.log(sections);
   return (
     <Base
       links={links}

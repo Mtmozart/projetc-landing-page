@@ -16,6 +16,7 @@ export const Container = styled.footer`
     & ${SectionContainer} {
       padding-top: 0;
       padding-bottom: 0;
+      width: 100%;
     }
   `}
 `;
